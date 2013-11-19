@@ -22,7 +22,7 @@ This project is designed to collect boundaries and descriptions of neighborhoods
 6. Grab a beer. Don't know if you have a brewery nearby? Check [here](http://nickmartinelli.com) :)  
 
 ###Thanks!
-#These are the things in the toolbox. 
+###These are the things in the toolbox. 
 1. [CartoDB](http://cartodb.com/) 
 2. [Leaflet](http://leafletjs.com/)
 3. [Bootstrap](http://getbootstrap.com/javascript/)
