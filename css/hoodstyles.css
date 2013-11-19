@@ -1,0 +1,236 @@
+html,body{
+	min-width: 800PX;
+}
+#map{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top:0px;
+	bottom: 0px;
+	background-color:#000000;
+}
+.leaflet-top {
+    top: 50px;
+}
+.leaflet-draw-guide-dash {
+	font-size: 1%;
+	opacity: 1;
+	position: absolute;
+	width: 2px;
+	height: 2px;
+}
+.leaflet-bar {
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.0);
+    border-style: solid;
+    border-width: thin;
+    border-color: #ccc;
+    background: rgba(255,255,255,1);
+}
+.leaflet-control-layers {
+	box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.0);
+    border-style: solid;
+    border-width: thin;
+    border-color: #ccc;
+    background: rgba(255,255,255,1);
+}
+.leaflet-container a{
+	color:#444;
+}
+.leaflet-container .leaflet-control-attribution{
+	box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.0);
+    border-style: none;
+    height: 17px;
+    background: rgba(255,255,255,.6);
+}
+.linksbackground{
+	position:absolute;
+	right:0px;
+	bottom:17px;
+	width:20px;
+	height:86px;
+	background-color:#ffffff;
+	opacity: 0.6;
+}
+.link-icons{
+	position:absolute;right:2px;
+} 
+a:hover { 
+	text-decoration: none;
+	color: #000;
+}
+.glyphicon{
+	opacity: .7;
+	color: #000;
+}
+.row{
+	padding-bottom: 10px;
+
+}
+.glyphicon:hover{
+	opacity:1;
+	cursor: pointer;
+}
+#descriptionDiv{
+	width:350px;
+	overflow:hidden;
+	position:absolute;
+	top:130px;
+	bottom: 0px;
+	left:30px;
+	margin-top:7px;
+	margin-left:-10px;
+	pointer-events:none;
+}
+.yesMouse{
+	pointer-events:all;
+}
+.noMouse{
+	pointer-events:none;
+}
+#accordian{
+	pointer-events:none;
+}
+.slimScrollDiv{
+	pointer-events:none;
+}
+.slimScrollBar{
+	pointer-events:all;
+}
+.detailText{
+    font-size: 12px;
+    color: #fff;
+    pointer-events:none;
+    padding-bottom: 0px;
+}
+.row{
+	padding-bottom: 2px;
+}
+.loveflag{
+	font-size: 10px;
+	color:#fff;
+}
+.loveIcon{
+	position: absolute;
+	z-index: 99999;
+	top:150px;
+	left:150px;
+	opacity: 0;
+}
+.lovecount{
+	font-size: 10px;
+	color: #999999;
+}
+.icon-row{
+	margin-top: 0px;
+	padding-bottom: 5px;
+}
+.panel{
+	margin-left: 10px;
+}
+.panel-group .panel {
+    margin-bottom: 0px;
+ }
+.panel-default{
+    background-color: rgba(20,20,20,0.8 );
+    border-style: none;
+    max-width: 300px;
+}
+.panel-heading{
+	opacity:.8;
+	border-style: none;
+    padding-top: 3px;
+	padding-left: 5px;
+	padding-bottom: 4px;
+    padding-right: 5px;
+}
+.panel-heading a{
+	font-size:  12px;
+    color: #000;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body{
+	border-top:none;
+	border-top-style: none;
+}
+.collapse .panel-body{	
+	border-top-style: none;
+}
+.navbar {
+	min-width: 800px;
+	background:rgba(0,0,0,.8);
+}
+.nav, .navbar-nav{
+	height:50px;
+	font-size: 12px;
+}
+.links{
+	font-size: 14px;
+}
+.circleBase {
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    behavior: url(PIE.htc);
+}
+.type1 {
+    width: 35px;
+    height: 35px;
+    background: #777;
+    border: 0px
+}
+.navText{
+	color: #777;
+}
+.navbar-inverse .navbar-nav > li > a:hover
+	color:rgb(153,153,153);
+}
+.spaceBtn:active{
+	background-color:hsl( #000);
+};
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+	margin-bottom: 0;
+}
+.tt-hint {
+	display: none;
+	width: 100%;
+	height: 38px;
+	padding: 8px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #999;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.tt-dropdown-menu {
+	min-width: 160px;
+	margin-top: 2px;
+	padding: 5px 0;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	background-clip: padding-box;
+ 
+}
+.tt-suggestion {
+	display: block;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+	color: #fff;
+	background-color: #428bca;
+}
+.tt-suggestion.tt-is-under-cursor a {
+	color: #fff;
+}
+.tt-suggestion p {
+	margin: 0;
+}
