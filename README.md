@@ -17,7 +17,9 @@ This project is designed to collect boundaries and descriptions of neighborhoods
 
 4. Update the include path in [callProxy.php](https://github.com/enam/neighborhoods/blob/master/php/callProxy.php) for wherever you put cartodbProxy.php on your server.
 
-5. Grab a beer. Don't know if you have a brewery nearby? Check [here](http://nickmartinelli.com) :)  
+5. Change [googleanalytics.js](https://github.com/enam/neighborhoods/blob/master/js/googleanalytics.js) to use your analytics code if you want, or remove the script that includes it from line 215 of [index.html](https://github.com/enam/neighborhoods/blob/master/index.html). 
+
+6. Grab a beer. Don't know if you have a brewery nearby? Check [here](http://nickmartinelli.com) :)  
 
 ###author
 * [Nick Martinelli](https://twitter.com/nichom)
