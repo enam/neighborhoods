@@ -23,4 +23,4 @@ This project is designed to collect boundaries and descriptions of neighborhoods
 
 ###author
 * [Nick Martinelli](https://twitter.com/nichom)
-Please contact me if you do make use, or improve the codez! I'd love to see what people do.
+Please contact me if you do make use, or improve the code, because there is a lot that could use improving, and I would love any tips! I'd also really enjoy seeing what people do.
