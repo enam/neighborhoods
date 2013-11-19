@@ -21,6 +21,15 @@ This project is designed to collect boundaries and descriptions of neighborhoods
 
 6. Grab a beer. Don't know if you have a brewery nearby? Check [here](http://nickmartinelli.com) :)  
 
+###Thanks!
+These are the things in the toolbox. 
+[CartoDB](http://cartodb.com/) 
+[Leaflet](http://leafletjs.com/)
+[Bootstrap](http://getbootstrap.com/javascript/)
+[Leaflet Draw!](https://github.com/Leaflet/Leaflet.draw)
+[Slim Scroll](http://rocha.la/jQuery-slimScroll/)
+Whole project was inspired by [Bostonography](http://bostonography.com/2012/crowdsourced-neighborhood-boundaries-part-one-consensus/).
+
 ###author
 * [Nick Martinelli](https://twitter.com/nichom)
 Please contact me if you do make use, or improve the code, because there is a lot that could use improving, and I would love any tips! I'd also really enjoy seeing what people do.
