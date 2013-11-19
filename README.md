@@ -23,12 +23,12 @@ This project is designed to collect boundaries and descriptions of neighborhoods
 
 ###Thanks!
 #These are the things in the toolbox. 
-1.[CartoDB](http://cartodb.com/) 
-2.[Leaflet](http://leafletjs.com/)
-3.[Bootstrap](http://getbootstrap.com/javascript/)
-4.[Leaflet Draw!](https://github.com/Leaflet/Leaflet.draw)
-5.[Slim Scroll](http://rocha.la/jQuery-slimScroll/)
-6.Whole project was inspired by [Bostonography](http://bostonography.com/2012/crowdsourced-neighborhood-boundaries-part-one-consensus/).
+1. [CartoDB](http://cartodb.com/) 
+2. [Leaflet](http://leafletjs.com/)
+3. [Bootstrap](http://getbootstrap.com/javascript/)
+4. [Leaflet Draw!](https://github.com/Leaflet/Leaflet.draw)
+5. [Slim Scroll](http://rocha.la/jQuery-slimScroll/)
+6. Whole project was inspired by [Bostonography](http://bostonography.com/2012/crowdsourced-neighborhood-boundaries-part-one-consensus/).
 
 ###author
 * [Nick Martinelli](https://twitter.com/nichom)
