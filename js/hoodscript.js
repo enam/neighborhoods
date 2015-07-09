@@ -180,9 +180,11 @@ function go(){
       }
   });
   $("#flagBtn").on('click',function(){
-    var q = "update "+tblName+" set flag = true where cartodb_id = "+flagIndex;
-    submitToProxy(q);
     $('#flagModal').modal('hide');
+    postData( "php/flag.php",{
+      table: tblName,
+      id: flagIndex
+    });
   });
   $("#downloadBtn").on('click',function(){
     window.open(downloadURL);
@@ -239,27 +241,28 @@ function go(){
     $('.typeahead').unbind();
 
     drawnItems.eachLayer(function (layer) {
-      var sql = "INSERT INTO "+tblName+" (the_geom, city, description, name,city_yrs,nbrhd_yrs,flag,loved) VALUES (ST_SetSRID(ST_GeomFromGeoJSON('";
-      var sql2 ='{"type":"MultiPolygon","coordinates":[[[';
       var a = layer._latlngs;
+      var coords = "";
       console.log('latlng Arr: length: '+a.length+ " " +a);
         for (var i = 0; i < a.length; i++) {
           var lat = (a[i].lat);//.toFixed(4); // rid of rounding that was there for url length issue during dev
           var lng = (a[i].lng);//.toFixed(4); // rid of rounding that was there for url length issue during dev
-          var st = '['+lng + ',' + lat+']';
-          //if(i<a.length-1){
-            st = st + ',';
-          //};
+          coords += '['+lng + ',' + lat+'],';
         if(i==a.length-1){
           var lat = (a[0].lat).toFixed(4);
             var lng = (a[0].lng).toFixed(4);
-          st = st + '['+lng + ',' + lat+']';
+          coords += '['+lng + ',' + lat+']';
         }
-          sql2 = sql2+st;
       }
-      sql2 = sql2 + "]]]}'),4326),'"+currentCity+"','"+(currentDescription.replace(/'/g,"''")).replace(/"/g,"''")+"','"+(currentNeighborhood.replace(/'/g,"''")).replace(/"/g,"''")+"','"+cityYears+"','"+nbrhdYears+"','false','0')";
-      var pURL = sql+sql2;
-      submitToProxy(pURL);
+      postData( "php/add.php",{
+        table: tblName,
+        coords: coords,
+        city: currentCity,
+        description: (currentDescription.replace(/'/g,"''")).replace(/"/g,"''"),
+        name: (currentNeighborhood.replace(/'/g,"''")).replace(/"/g,"''"),
+        cityYears: cityYears,
+        hoodYears: nbrhdYears
+      });
       drawnItems.clearLayers();
     });
     alert("Your neighborhood has been added! Draw more neighborhoods or take a look what has been added so far by clicking 'View Maps'.");
@@ -498,14 +501,13 @@ var resizeHandler = function(){
   var position = $('#descriptionDiv').position().top;
   contentHeight = $('#accordion')[0].scrollHeight;
   }
-var submitToProxy = function(q){
-  $.post("php/callProxy.php",
-    {
-      qurl:q,
-      cache: false,
-      timeStamp: new Date().getTime()
-    }, function(data) {
-      console.log(data);
+var postData = function(url,data){
+  if ( !url || !data ) return;
+  data.cache = false;
+  data.timeStamp = new Date().getTime()
+  $.post(url,
+    data, function(d) {
+      console.log(d);
     });
 }
 var getExistingNeighborhoodNames = function(){
@@ -607,10 +609,21 @@ $(document).on('click',".flag-btn",function(){
 
 });
 $(document).on('click',".heart-btn",function(event){
-  var heartIndex = $(this).attr("name");
-  var q = "update "+tblName+" set loved = loved + 1 where cartodb_id = "+heartIndex;
-  submitToProxy(q);
-  animateHeart(event.clientX,event.clientY);
+  var heartIndex = $(this).attr("name"),
+    op;
+  if ( !$(this).hasClass('flagged') ){
+    op = "+ 1";
+    animateHeart(event.clientX,event.clientY);
+    $(this).addClass('flagged')
+  } else {
+    op = "- 1";
+    $(this).removeClass('flagged')
+  }
+  postData( "php/heart.php", {
+    table: tblName,
+    id: heartIndex,
+    op: op
+  });
 });
 $(document).on("hidden.bs.collapse", ".collapse", function () {resizeHandler()});
 $(window).resize(function(){resizeHandler()});
